@@ -18,14 +18,7 @@ Voiture::Voiture()
 		cout<<"Constructeur par défaut de Voiture"<<endl;
 	#endif
 
-	Option** pOption=&options[0];
-
-    setNom("Fichier sans nom");
-
-	modele.setNom("Modele sans nom");
-	modele.setMoteur(Hybride);
-	modele.setPrixDeBase(0);
-	modele.setPuissance(0);
+    setNom("Voiture sans nom");
 
 	for(int i=0;i<5;i++)
 	{
@@ -55,7 +48,7 @@ Voiture::Voiture(string nom, Modele modele)
 Voiture::Voiture(const Voiture &source)
 {
 	#ifdef DEBUG
-		cout<<"Constructeur de copie de Voiture["<<source.getNom()<<"-"<<source.getPuissance()<<"-"<<source.getNom()<<"]"<<endl;
+		cout<<"Constructeur de copie de Voiture["<<source.getNom()<<"]"<<endl;
 	#endif
 	setNom(source.getNom());
 	setModele(source.getModele());
@@ -70,7 +63,6 @@ Voiture::Voiture(const Voiture &source)
 }
 
 
-
 Voiture::~Voiture()
 {
 	#ifdef DEBUG
@@ -82,7 +74,7 @@ Voiture::~Voiture()
         if(options[i]!= NULL)
         {
             delete options[i];
-            options[i]=NULL;
+            //options[i]=NULL;
         }
      }
 

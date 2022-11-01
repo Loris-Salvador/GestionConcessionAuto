@@ -14,6 +14,12 @@ class Option
         string intitule;
         float prix;
     public:
+
+        Option();
+        Option(string, string, float);
+        Option(const Option&);
+        ~Option();
+
         void setCode(string);
         void setIntitule(string);
         void setPrix(float);
@@ -21,12 +27,6 @@ class Option
         string getCode()const;
         string getIntitule()const;
         float getPrix()const;
-
-
-        Option();
-        Option(string, string, float);
-        Option(const Option&);
-        ~Option();
 
         void Affiche()const;
 

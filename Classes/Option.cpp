@@ -5,37 +5,6 @@
 using namespace std;
 
 
-/***********************************************************************************/
-/*****************Getters et Setters ***********************************************/
-/***********************************************************************************/
-
-void Option::setCode(string c)
-{
-    code=c;
-}
-void Option::setIntitule(string inti)
-{
-    intitule=inti;
-}
-void Option::setPrix(float p)
-{
-    prix=p;
-}
-
-
-string Option::getCode()const
-{
-    return code;
-}
-string Option::getIntitule()const
-{
-    return intitule;
-}
-float Option::getPrix()const
-{
-    return prix;
-}
-
 
 /***********************************************************************************/
 /*****************Constructeurs et destructeur**************************************/
@@ -82,6 +51,39 @@ Option::~Option()
 
 
 }
+
+
+/***********************************************************************************/
+/*****************Getters et Setters ***********************************************/
+/***********************************************************************************/
+
+void Option::setCode(string c)
+{
+    code=c;
+}
+void Option::setIntitule(string inti)
+{
+    intitule=inti;
+}
+void Option::setPrix(float p)
+{
+    prix=p;
+}
+
+
+string Option::getCode()const
+{
+    return code;
+}
+string Option::getIntitule()const
+{
+    return intitule;
+}
+float Option::getPrix()const
+{
+    return prix;
+}
+
 
 //////////FONCTION AFFICHE//////////////////
 

@@ -14,22 +14,23 @@ class Voiture
 
 
     private:
+    
         string nom;
         Modele modele;
         Option* options[5];
 
     public:
 
-        void setModele(Modele m);
-        void setNom(string n);
-        string getNom()const;
-        Modele getModele()const;
-
 
         Voiture();
         Voiture(string nom, Modele modele);
         Voiture(const Voiture &source);
         ~Voiture();
+
+        void setModele(Modele m);
+        void setNom(string n);
+        string getNom()const;
+        Modele getModele()const;
 
         void Affiche()const;
         
