@@ -70,13 +70,21 @@ int Modele::getPuissance()const
 }
 Moteur Modele::getMoteur()const
 {
-	return moteur;
+	// if(moteur==0)
+	// 	return "Essence";
+	// else if(moteur==1)
+	// 	return "Diesel";
+	// else if(moteur==2)
+	// 	return "Electrique";
+	// else if(moteur==3)
+	// 	return "Hybride";
+	
+	return moteur; //+ Moteur a la place de string
 }
 float Modele::getPrixDeBase()const
 {
 	return PrixDeBase;
 }
-
 
 void Modele::setPuissance(int p)
 {
@@ -113,16 +121,15 @@ istream& operator>>(istream& s, Modele& m)
 {
 	int p;
 	float prix;
-	char* n;
+	char n[50];
 	int choix;
-	n=new char[50];
 	Moteur moteur;
 
 	cout << "Nom du modele : "<<endl;
 	do
     {
-        cin.ignore();
-        fgets(n, 50, stdin);
+        //cin.ignore();
+        fgets(n, 100, stdin);
         n[strlen(n)-1]=0;
 
     } while (n[0]=='\0');
@@ -136,6 +143,7 @@ istream& operator>>(istream& s, Modele& m)
 	cin >> prix;
 
 	m.setNom(n);
+	//delete n;
 	m.setPuissance(p);
 	if(choix==1)
 		m.setMoteur(Essence);

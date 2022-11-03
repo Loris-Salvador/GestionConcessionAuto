@@ -55,11 +55,13 @@ Intervenant& Intervenant::operator=(const Intervenant& i)
 }
 string Intervenant::ToString()const
 {
-    return 0;
+    printf("Ce n'est ni un client ni un employe");
+    exit(1);
 }
 string Intervenant::Tuple()const
 {
-    return 0;
+    printf("Ce n'est ni un client ni un employe");
+    exit(1);
 }
 
 
