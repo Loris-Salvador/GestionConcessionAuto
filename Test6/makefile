@@ -1,5 +1,5 @@
 CC = g++
-EXEC = Test4
+EXEC = Test6
 DEBUG = #-D DEBUG
 
 Fichier.cpp = Classes/
