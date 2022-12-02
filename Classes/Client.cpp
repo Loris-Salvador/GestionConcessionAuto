@@ -25,7 +25,7 @@ Client::Client(const Client &source) : Intervenant(source)
 }
 Client::~Client()
 {
-   //cout<<"yo";
+   cout<<"Destructuer de Client"<<endl;
 }
 
 /***********************************************************************************/

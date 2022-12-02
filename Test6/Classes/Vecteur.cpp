@@ -18,12 +18,8 @@ Vecteur<T>::Vecteur()
     _size = 0;
 }
 template <class T>
-Vecteur<T>::Vecteur(/*const T * vec, int sizeMax, */int sizeMax)
+Vecteur<T>::Vecteur(int sizeMax)
 {
-    // for(int i=0;i<size;i++)
-    // {
-    //     v[i] = vec[i];
-    // }
     v = new T[sizeMax];
     _sizeMax = sizeMax;
 
@@ -65,7 +61,7 @@ int Vecteur<T>::sizeMax()const
 template <class T>
 void Vecteur<T>::Affiche()const
 {
-    for(int i=0;i<size();i++)
+    for(int i=0;i<sizeMax();i++)
     {
         cout<<i<<" : "<<v[i]<<" \n";
     }
@@ -73,6 +69,11 @@ void Vecteur<T>::Affiche()const
 template <class T>
 void Vecteur<T>::insere(const T & val)
 {
+    if(size()==sizeMax())
+    {
+        printf("Plus de place dans le vecteur");
+        return;
+    }
     (v[_size])=val;
     _size++;
 }

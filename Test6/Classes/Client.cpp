@@ -69,12 +69,48 @@ ostream& operator<<(ostream& s, const Client &c)
 
     return s;
 }
+bool Client::operator<(const Client &c)const
+{
+    // string c1, c2;
 
+    // c1=this->getNom()+this->getPrenom();
+    // c2=c.getNom()+c.getPrenom();
 
+    // if(c1<c2)
+    //     return true;
+    // else 
+    //     return false;
 
+    return Personne::operator<(c);
+}
+bool Client::operator>(const Client &c)const
+{
+    // string c1, c2;
 
+    // c1=this->getNom()+this->getPrenom();
+    // c2=c.getNom()+c.getPrenom();
 
+    // if(c1>c2)
+    //     return true;
+    // else 
+    //     return false;
 
+    return Personne::operator>(c);
+}
+bool Client::operator==(const Client &c)const
+{
+    // string c1, c2;
+
+    // c1=this->getNom()+this->getPrenom();
+    // c2=c.getNom()+c.getPrenom();
+
+    // if(c1==c2)
+    //     return true;
+    // else 
+    //     return false;
+
+    return Personne::operator==(c);
+}
 
 
 

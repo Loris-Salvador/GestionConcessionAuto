@@ -94,7 +94,6 @@ void Employe::ResetMotDePasse()
         motDePasse=NULL;
     }
     
-    
     //*motDePasse=NULL;
 }
 void Employe::setFonction(string fct)

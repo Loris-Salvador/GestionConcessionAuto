@@ -33,7 +33,6 @@ Employe::~Employe()
 {
     if(motDePasse!=NULL)
         delete motDePasse;
-    //cout<<"yo";
 }
 
 /***********************************************************************************/

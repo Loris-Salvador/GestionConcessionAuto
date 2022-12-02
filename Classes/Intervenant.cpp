@@ -27,7 +27,7 @@ Intervenant::Intervenant(const Intervenant &source) : Personne(source)
 }
 Intervenant::~Intervenant()
 {
-
+    cout<<"Destructuer d'intervenant"<<endl;
 }
 
 /***********************************************************************************/

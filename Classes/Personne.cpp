@@ -52,6 +52,7 @@ Personne::~Personne()
     #ifdef DEBUG
 		cout<<"Destructeur de Personne"<<getNom()<<"-"<<getPrenom()<<endl;
 	#endif
+    cout<<"Destructuer de personne"<<endl;
 }
 
 /***********************************************************************************/

@@ -6,7 +6,7 @@ using namespace std;
 #include "Client.h"
 
 
-//#include "VecteurTrie.h"
+#include "VecteurTrie.h"
 
 int  Menu();
 void Essai1();
@@ -33,10 +33,10 @@ int main(int argc,char* argv[])
       case 2 : Essai2(); break;
       case 3 : Essai3(); break;
       case 4 : Essai4(); break;
-      // case 5 : Essai5(); break;
-      // case 6 : Essai6(); break;
-      // case 7 : Essai7(); break;
-      // case 8 : Essai8(); break;
+      case 5 : Essai5(); break;
+      case 6 : Essai6(); break;
+      case 7 : Essai7(); break;
+      case 8 : Essai8(); break;
       default : fini = true ; break;
     }
   }
@@ -226,116 +226,116 @@ void Essai4()
   }
 }
 
-// /*******************************************************************************************************/
-// void Essai5()
-// {
-//   cout << "----- 5. Test du template Vecteur avec des entiers ------------------------------------------" << endl;
-//   cout << "----- 5.1 Creation et gestion d'un Vecteur --------------------------------------------------" << endl;
+/*******************************************************************************************************/
+void Essai5()
+{
+  cout << "----- 5. Test du template Vecteur avec des entiers ------------------------------------------" << endl;
+  cout << "----- 5.1 Creation et gestion d'un Vecteur --------------------------------------------------" << endl;
 
-//   VecteurTrie<int> vec(10);  // Capacité maximale de 10
-//   vec.Affiche();                                         // --> ()
-//   cout << endl;
+  VecteurTrie<int> vec(10);  // Capacité maximale de 10
+  vec.Affiche();                                         // --> ()
+  cout << endl;
 
-//   cout << "On insere 3,-2,5,-1,0 et 17..." << endl;
-//   vec.insere(3);
-//   vec.insere(-2);
-//   vec.insere(5);
-//   vec.insere(-1);
-//   vec.insere(0);
-//   vec.insere(17);
-//   vec.Affiche();        // --> (-2 -1 0 3 5 17)
-//   cout << "Capacite du vecteur = " << vec.sizeMax() << endl;
-//   cout << "Le vecteur contient " << vec.size() << " elements." << endl << endl;
+  cout << "On insere 3,-2,5,-1,0 et 17..." << endl;
+  vec.insere(3);
+  vec.insere(-2);
+  vec.insere(5);
+  vec.insere(-1);
+  vec.insere(0);
+  vec.insere(17);
+  vec.Affiche();        // --> (-2 -1 0 3 5 17)
+  cout << "Capacite du vecteur = " << vec.sizeMax() << endl;
+  cout << "Le vecteur contient " << vec.size() << " elements." << endl << endl;
 
-//   cout << "----- 5.2 On retire des elements du vecteur -------------------------------------------------" << endl;
-//   cout << "On retire l'element d'indice 4 (5)  : " << vec.retire(4) << endl;
-//   vec.Affiche();
-//   cout << "On retire l'element d'indice 0 (-2)  : " << vec.retire(0) << endl;
-//   vec.Affiche();
-//   cout << "On retire l'element d'indice 3 (3) : " << vec.retire(3) << endl;
-//   vec.Affiche();
-// }
+  cout << "----- 5.2 On retire des elements du vecteur -------------------------------------------------" << endl;
+  cout << "On retire l'element d'indice 4 (5)  : " << vec.retire(4) << endl;
+  vec.Affiche();
+  cout << "On retire l'element d'indice 0 (-2)  : " << vec.retire(0) << endl;
+  vec.Affiche();
+  cout << "On retire l'element d'indice 3 (3) : " << vec.retire(3) << endl;
+  vec.Affiche();
+}
 
-// /*******************************************************************************************************/
-// void Essai6()
-// {
-//   cout << "----- 6. Test du template VecteurTrie avec des objets de la classe Client ---------------" << endl;
-//   cout << "Creation  d'un vecteur trie..." << endl;
-//   VecteurTrie<Client> vec;
-//   vec.Affiche();                                       
-//   cout << endl;
+/*******************************************************************************************************/
+void Essai6()
+{
+  cout << "----- 6. Test du template VecteurTrie avec des objets de la classe Client ---------------" << endl;
+  cout << "Creation  d'un vecteur trie..." << endl;
+  VecteurTrie<Client> vec;
+  vec.Affiche();                                       
+  cout << endl;
 
-//   cout << "On insere quelques clients..." << endl;
-//   vec.insere(Client("Wagner","Jean-Marc",1,"0498.25.36.23"));
-//   vec.insere(Client("Leonard","Anne",2,"0478/11.23.65"));
-//   vec.insere(Client("Quettier","Patrick",3,"0476/78.45.12"));
-//   vec.insere(Client("Vilvens","Claude",4,"0477/45.29.98"));
-//   vec.insere(Client("Charlet","Christophe",5,"0475/71.31.89"));
-//   vec.insere(Client("Quettier","Sophie",6,"0475/48.65.92"));
-//   vec.Affiche();
-//   cout << "Le vecteur contient " << vec.size() << " elements." << endl;
-//   cout << endl;
-// }
+  cout << "On insere quelques clients..." << endl;
+  vec.insere(Client("Wagner","Jean-Marc",1,"0498.25.36.23"));
+  vec.insere(Client("Leonard","Anne",2,"0478/11.23.65"));
+  vec.insere(Client("Quettier","Patrick",3,"0476/78.45.12"));
+  vec.insere(Client("Vilvens","Claude",4,"0477/45.29.98"));
+  vec.insere(Client("Charlet","Christophe",5,"0475/71.31.89"));
+  vec.insere(Client("Quettier","Sophie",6,"0475/48.65.92"));
+  vec.Affiche();
+  cout << "Le vecteur contient " << vec.size() << " elements." << endl;
+  cout << endl;
+}
 
-// /*******************************************************************************************************/
-// void Essai7()
-// {
-//   cout << "----- 7. Test de l'iterateur avec un VecteurTrie d'entiers ------------------------" << endl;
-//   cout << "Creation  d'un vecteur trie..." << endl;
-//   VecteurTrie<int> vec;
+/*******************************************************************************************************/
+void Essai7()
+{
+  cout << "----- 7. Test de l'iterateur avec un VecteurTrie d'entiers ------------------------" << endl;
+  cout << "Creation  d'un vecteur trie..." << endl;
+  VecteurTrie<int> vec;
 
-//   cout << "On insere 3,-2,5,-1 et 0..." << endl;
-//   vec.insere(3);
-//   vec.insere(-2);
-//   vec.insere(5);
-//   vec.insere(-1);
-//   vec.insere(0);
+  cout << "On insere 3,-2,5,-1 et 0..." << endl;
+  vec.insere(3);
+  vec.insere(-2);
+  vec.insere(5);
+  vec.insere(-1);
+  vec.insere(0);
 
-//   cout << "On affiche grace a un iterateur..." << endl;
-//   Iterateur<int> it(vec);
-//   for (it.reset() ; !it.end() ; it++)
-//     cout << " " << (int)it << endl;
-//   cout << endl;
+  cout << "On affiche grace a un iterateur..." << endl;
+  Iterateur<int> it(vec);
+  for (it.reset() ; !it.end() ; it++)
+    cout << " " << (int)it << endl;
+  cout << endl;
 
-//   cout << "On supprime l'element d'indice 1 et on re-affiche grace a l'iterateur..." << endl;
-//   vec.retire(1);
-//   it.reset();
-//   while (!it.end())
-//   {
-//     cout << " " << (int)it << endl;
-//     it++;
-//   }
-// }
+  cout << "On supprime l'element d'indice 1 et on re-affiche grace a l'iterateur..." << endl;
+  vec.retire(1);
+  it.reset();
+  while (!it.end())
+  {
+    cout << " " << (int)it << endl;
+    it++;
+  }
+}
 
-// /*******************************************************************************************************/
-// void Essai8()
-// {
-//   cout << "----- 8. Test de l'iterateur avec un VecteurTrie de Clients ---------------------" << endl;
-//   cout << "Creation  d'un vecteur..." << endl;
-//   VecteurTrie<Client> vec(8);
+/*******************************************************************************************************/
+void Essai8()
+{
+  cout << "----- 8. Test de l'iterateur avec un VecteurTrie de Clients ---------------------" << endl;
+  cout << "Creation  d'un vecteur..." << endl;
+  VecteurTrie<Client> vec(8);
   
-//   cout << "On insere quelques clients..." << endl;
-//   vec.insere(Client("Wagner","Jean-Marc",1,"0498.25.36.23"));
-//   vec.insere(Client("Leonard","Anne",2,"0478/11.23.65"));
-//   vec.insere(Client("Quettier","Patrick",3,"0476/78.45.12"));
-//   vec.insere(Client("Vilvens","Claude",4,"0477/45.29.98"));
-//   vec.insere(Client("Charlet","Christophe",5,"0475/71.31.89"));
+  cout << "On insere quelques clients..." << endl;
+  vec.insere(Client("Wagner","Jean-Marc",1,"0498.25.36.23"));
+  vec.insere(Client("Leonard","Anne",2,"0478/11.23.65"));
+  vec.insere(Client("Quettier","Patrick",3,"0476/78.45.12"));
+  vec.insere(Client("Vilvens","Claude",4,"0477/45.29.98"));
+  vec.insere(Client("Charlet","Christophe",5,"0475/71.31.89"));
   
-//   cout << "On affiche grace a un iterateur..." << endl;
-//   Iterateur<Client> it(vec);
-//   for (it.reset() ; !it.end() ; it++)
-//   {
-//     Client c = (Client)it;
-//     cout << " " << c << " >> Tuple = " << c.Tuple() << endl;
-//   }
-//   cout << endl;
+  cout << "On affiche grace a un iterateur..." << endl;
+  Iterateur<Client> it(vec);
+  for (it.reset() ; !it.end() ; it++)
+  {
+    Client c = (Client)it;
+    cout << " " << c << " >> Tuple = " << c.Tuple() << endl;
+  }
+  cout << endl;
 
-//   cout << "On supprime l'element d'indice 1 et on re-affiche grace a l'iterateur..." << endl;
-//   vec.retire(1);
-//   it.reset();
-//   while (!it.end())
-//   {
-//     cout << " " << (Client)it << endl;
-//     it++;
-//   }
-// }
+  cout << "On supprime l'element d'indice 1 et on re-affiche grace a l'iterateur..." << endl;
+  vec.retire(1);
+  it.reset();
+  while (!it.end())
+  {
+    cout << " " << (Client)it << endl;
+    it++;
+  }
+}

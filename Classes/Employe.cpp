@@ -25,6 +25,7 @@ Employe::Employe(string n, string pr, int num, string log, string fct) : Interve
 }
 Employe::Employe(const Employe &source) : Intervenant(source)
 {
+    motDePasse=NULL;
     setMotDePasse(source.getMotDePasse());
     setLogin(source.getLogin());
     setFonction(source.getFonction());
@@ -33,7 +34,7 @@ Employe::~Employe()
 {
     if(motDePasse!=NULL)
         delete motDePasse;
-    //cout<<"yo";
+    cout<<"Destructuer d'Employe"<<endl;
 }
 
 /***********************************************************************************/
